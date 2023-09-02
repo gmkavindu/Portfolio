@@ -54,10 +54,19 @@ section {
 
 
 .logo {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-    cursor: default;
+    font-size: 1rem;
+    background: linear-gradient(45deg, #5f5897, #df657b, #63cbe0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.logo img{
+    max-width: 5rem; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
 }
 
 .navbar a {

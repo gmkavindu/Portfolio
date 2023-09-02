@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .slideshow-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto; 
+            max-width: 600vw; 
+            height: 90vh;
+            overflow: hidden;
+        }
+
+        .slide {
+                display: none;
+                 
+        }
+
+        img {
+            max-width: 100%; 
+            height: 100%; 
+        }
+
+        .prev, .next {
+            padding: 1rem 2.8rem;
+            background: var(--main-color);
+            border-radius: 4rem;
+            box-shadow: 0 0 1rem var(--main-color);
+            font-size: 1.6rem;
+            color: var(--second-color);
+            letter-spacing: .1rem;
+            font-weight: 600;
+        }   
+
+        .next:hover {
+            box-shadow: none;
+        }
+
+        .prev:hover {
+            box-shadow: none;
+        }
+
+
+        .slideshow-container {
+            position: relative;
+        }
+
+        .prev {
+            position: absolute;
+            
+            left: 15vw;
+        }
+
+        .next {
+            position: absolute;
+            
+            right: 15vw;
+        }
+
+        
+
+
+        .certifications-container1 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            align-items : center;
+            gap: 2.5rem;
+            place-items: center;
+            justify-content: center;
+            padding-top:4vw;
+
+
+        }
+
+        .certifications-container1 .certifications-box1 {
+            position: relative;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem var(--second-bg-color);
+            overflow: hidden;
+            display: flex;
+            width: 50vw;
+            height: 35vw;
+    
+
+        }
+
+        .certifications-box1 img {
+            width:100%;
+            transition: .5s ease;
+            object-fit: cover;
+    
+        }
+
+        .certifications-box1:hover img {
+            transform: scale(1.1);
+        }
+
+        .certifications-box1 .certifications-layer1{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0, .1), var(--main-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 4rem;
+            transform: translateY(100%);
+            transition: .5s ease;
+    
+        }
+
+        .certifications-box1:hover .certifications-layer1 {
+            transform: translateY(0);
+            height: 30%;
+        }
+
+        .certifications-layer1 h4 {
+            font-size: 1.5rem;
+            color: var(--bg-color); 
+            font-weight: bold;
+
+        }
+
+        .certifications-button1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 5rem;
+        }
+
+        .certifications-layer1 a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            background: var(--text-color);
+            border-radius: 50%;
+
+        }
+
+
+        .certifications-layer1 a i {
+            font-size: 2rem;
+            color: var(--second-bg-color);
+
+        }
+
+
+        .certifications-layer1 a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            background: var(--text-color);
+            border-radius: 50%;
+
+        }
+
+
+        .certifications-layer1 a i {
+            font-size: 2rem;
+            color: var(--second-bg-color);
+
+        }
+
+
+        @media (max-width: 768px) {
+            .certifications-container1 .certifications-box1{
+                width: 80vw;
+                height: 55vw;
+
+            }
+
+
+        }
+
+    </style>
+    <title>Certifications Slider</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html#" class="logo">Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="index.html#home" class="active">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#portfolio">Projects</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.hTML#contact">Contact</a>
+            
+        </nav>
+    </header>
+    <div class="slideshow-container">
+        <div class="certifications-container1">
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/professional-practice.png" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://open.uom.lk/verify" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>    
+
+
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/serverside.png" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://open.uom.lk/verify" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div> 
+
+
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/frontend.png" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://open.uom.lk/verify" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/python-mora.png" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://open.uom.lk/verify" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/web-mora.png" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://open.uom.lk/verify" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/python-mora-bigi.png" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://open.uom.lk/verify" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/java-in.jpg" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://www.sololearn.com/certificates/CC-QWA4DXW2" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/javascript-in.jpg" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://www.sololearn.com/certificates/CC-J9ZXDOE6" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/python-in.jpg" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://www.sololearn.com/certificates/CC-BGJAT73V" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/java-begi.jpg" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://www.sololearn.com/certificates/CC-XCE68QBB" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/javascript-begi.jpg" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://www.sololearn.com/certificates/CC-B8WTWENC" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="slide">
+                <div class="certifications-box1">
+                    <img src="images/python-begi.jpg" alt="">
+                    <div class="certifications-layer1">
+                        <h4>Show credential</h4>
+                        <a href="https://www.sololearn.com/certificates/CC-3FUJX2H2" target="_blank"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div> 
+
+        </div>
+    </div>    
+    <button class="prev">Previous</button>
+    <button class="next">Next</button>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+        showSlide(slideIndex);
+
+        function showSlide(n) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[n].style.display = "block";
+        }
+
+        document.querySelector(".prev").addEventListener("click", function () {
+            slideIndex--;
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            showSlide(slideIndex);
+        });
+
+        document.querySelector(".next").addEventListener("click", function () {
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            showSlide(slideIndex);
+        });
+
+        // Auto-slide every 2 seconds
+        setInterval(function () {
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            showSlide(slideIndex);
+        }, 2000);
+    </script>
+    <script src="script.js"></script>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+</body>
+</html>
